@@ -12,7 +12,7 @@ class NewTaskViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        categoryCollectionView.register(UINib(nibName: StringConstant.categoryCollectionViewcell, bundle: nil), forCellWithReuseIdentifier: StringConstant.categoryCollectionViewcell)
         
     }
     
@@ -23,11 +23,12 @@ class NewTaskViewController: UIViewController {
 extension NewTaskViewController: UICollectionViewDelegate, UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let item = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.categoryCollectionViewcell, for: indexPath) as! CategoryCollectionViewCell
+        return item
     }
     
     

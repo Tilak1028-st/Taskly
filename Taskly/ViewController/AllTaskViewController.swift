@@ -17,12 +17,21 @@ class AllTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpView()
+    }
+    
+//MARK: - Set Initial view
+    private func setUpView()
+    {
+        taskTableView.scrollIndicatorInsets = UIEdgeInsets(top: 0,left: 0,bottom: 0,right: taskTableView.bounds.size.width-5);
+        taskTableView.indicatorStyle = UIScrollView.IndicatorStyle.black
         taskTableView.register(UINib(nibName: StringConstant.tasktableViewcell, bundle: nil), forCellReuseIdentifier: StringConstant.tasktableViewcell)
         dateCollectionView.register(UINib(nibName: StringConstant.dateCollectionViewcell, bundle: nil), forCellWithReuseIdentifier: StringConstant.dateCollectionViewcell)
         taskTableView.separatorColor = UIColor.clear
     }
     
-    
+//MARK: - Function to go to NewTaskVc.
     @IBAction func createNewTask(_ sender: UIButton) {
         let newtaskVc = self.storyboard?.instantiateViewController(withIdentifier: StringConstant.newtaskVc) as! NewTaskViewController
         self.navigationController?.pushViewController(newtaskVc, animated: true)
@@ -39,20 +48,12 @@ extension AllTaskViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = taskTableView.dequeueReusableCell(withIdentifier: StringConstant.tasktableViewcell, for: indexPath) as! TaskTableViewCell
+      
         return cell
     }
     
-    
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
        175
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        0
-    }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        0
     }
 }
 

@@ -13,4 +13,5 @@ class StringConstant
     static var tasktableViewcell = "TaskTableViewCell"
     static var dateCollectionViewcell = "DateCollectionViewCell"
     static var newtaskVc = "NewTaskViewController"
+    static var categoryCollectionViewcell = "CategoryCollectionViewCell"
 }
