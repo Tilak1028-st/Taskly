@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82A8095A2874693300562FCE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A809582874693300562FCE /* CategoryCollectionViewCell.swift */; };
+		82A8095B2874693300562FCE /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A809592874693300562FCE /* CategoryCollectionViewCell.xib */; };
 		82C2A61C287440A000D3D5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A61B287440A000D3D5B5 /* AppDelegate.swift */; };
 		82C2A61E287440A000D3D5B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A61D287440A000D3D5B5 /* SceneDelegate.swift */; };
 		82C2A623287440A000D3D5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82C2A621287440A000D3D5B5 /* Main.storyboard */; };
@@ -20,9 +22,12 @@
 		82C2A6442874496700D3D5B5 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A6422874496700D3D5B5 /* DateCollectionViewCell.swift */; };
 		82C2A6452874496700D3D5B5 /* DateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82C2A6432874496700D3D5B5 /* DateCollectionViewCell.xib */; };
 		82C2A64728745E8400D3D5B5 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A64628745E8400D3D5B5 /* NewTaskViewController.swift */; };
+		82C2A64A287462D200D3D5B5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A649287462D200D3D5B5 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82A809582874693300562FCE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		82A809592874693300562FCE /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		82C2A618287440A000D3D5B5 /* Taskly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C2A61B287440A000D3D5B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82C2A61D287440A000D3D5B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		82C2A6422874496700D3D5B5 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
 		82C2A6432874496700D3D5B5 /* DateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCollectionViewCell.xib; sourceTree = "<group>"; };
 		82C2A64628745E8400D3D5B5 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		82C2A649287462D200D3D5B5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 			children = (
 				82C2A632287441B600D3D5B5 /* Delegate */,
 				82C2A6382874449700D3D5B5 /* Constant */,
+				82C2A648287462B700D3D5B5 /* Parent */,
 				82C2A63B287444D700D3D5B5 /* Cell */,
 				82C2A633287441C600D3D5B5 /* ViewController */,
 				82C2A634287441D500D3D5B5 /* View */,
@@ -148,8 +155,26 @@
 			children = (
 				82C2A6422874496700D3D5B5 /* DateCollectionViewCell.swift */,
 				82C2A6432874496700D3D5B5 /* DateCollectionViewCell.xib */,
+				82C2A64F2874668800D3D5B5 /* CategoryCollectionView */,
 			);
 			path = DateCollectionView;
+			sourceTree = "<group>";
+		};
+		82C2A648287462B700D3D5B5 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				82C2A649287462D200D3D5B5 /* CustomTextField.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		82C2A64F2874668800D3D5B5 /* CategoryCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				82A809582874693300562FCE /* CategoryCollectionViewCell.swift */,
+				82A809592874693300562FCE /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82A8095B2874693300562FCE /* CategoryCollectionViewCell.xib in Resources */,
 				82C2A63F2874450D00D3D5B5 /* TaskTableViewCell.xib in Resources */,
 				82C2A62B287440A100D3D5B5 /* LaunchScreen.storyboard in Resources */,
 				82C2A628287440A100D3D5B5 /* Assets.xcassets in Resources */,
@@ -231,8 +257,10 @@
 				82C2A63E2874450D00D3D5B5 /* TaskTableViewCell.swift in Sources */,
 				82C2A61E287440A000D3D5B5 /* SceneDelegate.swift in Sources */,
 				82C2A626287440A000D3D5B5 /* Taskly.xcdatamodeld in Sources */,
+				82A8095A2874693300562FCE /* CategoryCollectionViewCell.swift in Sources */,
 				82C2A63A287444B600D3D5B5 /* StringConstant.swift in Sources */,
 				82C2A6442874496700D3D5B5 /* DateCollectionViewCell.swift in Sources */,
+				82C2A64A287462D200D3D5B5 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

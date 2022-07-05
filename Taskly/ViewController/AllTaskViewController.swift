@@ -24,7 +24,8 @@ class AllTaskViewController: UIViewController {
     
     
     @IBAction func createNewTask(_ sender: UIButton) {
-        
+        let newtaskVc = self.storyboard?.instantiateViewController(withIdentifier: StringConstant.newtaskVc) as! NewTaskViewController
+        self.navigationController?.pushViewController(newtaskVc, animated: true)
     }
     
 }
