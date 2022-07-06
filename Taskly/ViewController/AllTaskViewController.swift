@@ -9,6 +9,8 @@ import UIKit
 
 class AllTaskViewController: UIViewController {
 
+    @IBOutlet weak var addView: UIView!
+    @IBOutlet weak var MainTaskView: UIView!
     @IBOutlet weak var navBar: NavigationBar!
     @IBOutlet weak var dateCollectionView: UICollectionView!
     @IBOutlet weak var topView: UIView!
@@ -30,6 +32,13 @@ class AllTaskViewController: UIViewController {
         taskTableView.register(UINib(nibName: StringConstant.tasktableViewcell, bundle: nil), forCellReuseIdentifier: StringConstant.tasktableViewcell)
         dateCollectionView.register(UINib(nibName: StringConstant.dateCollectionViewcell, bundle: nil), forCellWithReuseIdentifier: StringConstant.dateCollectionViewcell)
         taskTableView.separatorColor = UIColor.clear
+        
+        self.myTaskView.clipsToBounds = true
+        self.myTaskView.layer.cornerRadius = 40
+        self.myTaskView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMinYCorner]
+        self.MainTaskView.clipsToBounds = true
+        self.MainTaskView.layer.cornerRadius = 40
+        self.MainTaskView.layer.maskedCorners = [.layerMaxXMinYCorner]
     }
     
 //MARK: - Function to go to NewTaskVc.
@@ -37,6 +46,7 @@ class AllTaskViewController: UIViewController {
         let newtaskVc = self.storyboard?.instantiateViewController(withIdentifier: StringConstant.newtaskVc) as! NewTaskViewController
         self.navigationController?.pushViewController(newtaskVc, animated: true)
     }
+    
     
 }
 
@@ -69,7 +79,21 @@ extension AllTaskViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = dateCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.dateCollectionViewcell, for: indexPath) as! DateCollectionViewCell
-        item.layer.cornerRadius = 10
+        item.cellView.layer.cornerRadius = 10
+        if indexPath.item == 0
+        {
+            item.dayLabel.textColor =  UIColor.white
+            item.dateLabel.textColor =  UIColor.white
+            item.cellView.backgroundColor = UIColor(red: 60.0/255.0, green: 145.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+        }
+        else
+        {
+            item.dayLabel.textColor =  UIColor(red: 60.0/255.0, green: 145.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+            item.dateLabel.textColor =  UIColor(red: 60.0/255.0, green: 145.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+            item.cellView.backgroundColor = UIColor.white
+            item.cellView.layer.borderWidth = 1
+            item.cellView.layer.borderColor = UIColor(red: 60.0/255.0, green: 145.0/255.0, blue: 217.0/255.0, alpha: 1.0).cgColor
+        }
         return item
     }
     

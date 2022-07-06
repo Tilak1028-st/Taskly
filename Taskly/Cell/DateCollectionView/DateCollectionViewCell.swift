@@ -9,6 +9,8 @@ import UIKit
 
 class DateCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()

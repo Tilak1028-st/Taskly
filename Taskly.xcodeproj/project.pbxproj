@@ -10,6 +10,7 @@
 		80A4DCA87676E5A8B1729A30 /* Pods_Taskly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10146A1FAC006A0D6F485F33 /* Pods_Taskly.framework */; };
 		8264002D28755CBB00CD7D93 /* NavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8264002C28755CBB00CD7D93 /* NavigationBar.xib */; };
 		8264002F28755CE000CD7D93 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8264002E28755CE000CD7D93 /* NavigationBar.swift */; };
+		826400312875787400CD7D93 /* CurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826400302875787400CD7D93 /* CurveView.swift */; };
 		82A8095A2874693300562FCE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A809582874693300562FCE /* CategoryCollectionViewCell.swift */; };
 		82A8095B2874693300562FCE /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82A809592874693300562FCE /* CategoryCollectionViewCell.xib */; };
 		82C2A61C287440A000D3D5B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C2A61B287440A000D3D5B5 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		10146A1FAC006A0D6F485F33 /* Pods_Taskly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Taskly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8264002C28755CBB00CD7D93 /* NavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationBar.xib; sourceTree = "<group>"; };
 		8264002E28755CE000CD7D93 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		826400302875787400CD7D93 /* CurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveView.swift; sourceTree = "<group>"; };
 		82A809582874693300562FCE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		82A809592874693300562FCE /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		82C2A618287440A000D3D5B5 /* Taskly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taskly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,8 +79,8 @@
 		82640025287554E100CD7D93 /* NavigationBar */ = {
 			isa = PBXGroup;
 			children = (
-				8264002C28755CBB00CD7D93 /* NavigationBar.xib */,
 				8264002E28755CE000CD7D93 /* NavigationBar.swift */,
+				8264002C28755CBB00CD7D93 /* NavigationBar.xib */,
 			);
 			path = NavigationBar;
 			sourceTree = "<group>";
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				82C2A649287462D200D3D5B5 /* CustomTextField.swift */,
+				826400302875787400CD7D93 /* CurveView.swift */,
 			);
 			path = Parent;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				82C2A63E2874450D00D3D5B5 /* TaskTableViewCell.swift in Sources */,
 				82C2A61E287440A000D3D5B5 /* SceneDelegate.swift in Sources */,
 				8264002F28755CE000CD7D93 /* NavigationBar.swift in Sources */,
+				826400312875787400CD7D93 /* CurveView.swift in Sources */,
 				82C2A626287440A000D3D5B5 /* Taskly.xcdatamodeld in Sources */,
 				82A8095A2874693300562FCE /* CategoryCollectionViewCell.swift in Sources */,
 				82C2A63A287444B600D3D5B5 /* StringConstant.swift in Sources */,

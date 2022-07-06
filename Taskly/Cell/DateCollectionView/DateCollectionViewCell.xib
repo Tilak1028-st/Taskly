@@ -55,6 +55,8 @@
             <size key="customSize" width="105" height="85"/>
             <connections>
                 <outlet property="cellView" destination="J5s-of-mCb" id="hih-f9-SlO"/>
+                <outlet property="dateLabel" destination="dhM-iK-iYL" id="Ja8-Ch-jqO"/>
+                <outlet property="dayLabel" destination="LbF-ye-LJH" id="EaV-cf-y51"/>
             </connections>
             <point key="canvasLocation" x="232.60869565217394" y="124.21875"/>
         </collectionViewCell>

@@ -35,13 +35,14 @@ class NewTaskViewController: UIViewController, UITextFieldDelegate {
         categoryCollectionView.register(UINib(nibName: StringConstant.categoryCollectionViewcell, bundle: nil), forCellWithReuseIdentifier: StringConstant.categoryCollectionViewcell)
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.navBar.subLeftImageView.isHidden = true
+        self.navBar.rightView.backgroundColor = UIColor.white
         self.navBar.leftImageView.image = UIImage(named: "less-than")
+        self.navBar.containerView.backgroundColor = UIColor.white
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(popNewtaskVc))
         tapRecognizer.numberOfTapsRequired = 1
-        
+        self.navBar.leftImageView.isUserInteractionEnabled = true
         self.navBar.leftImageView.addGestureRecognizer(tapRecognizer)
-        
     }
     
     
@@ -114,6 +115,15 @@ extension NewTaskViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: StringConstant.categoryCollectionViewcell, for: indexPath) as! CategoryCollectionViewCell
         item.categoryButton.setTitle(CategorySelection.allCases[indexPath.row].rawValue, for: .normal)
+        if indexPath.item == 0
+        {
+            item.categoryButton.backgroundColor = UIColor(red: 60.0/255.0, green: 145.0/255.0, blue: 217.0/255.0, alpha: 1.0)
+
+        }
+        else
+        {
+            item.categoryButton.backgroundColor = UIColor.white
+        }
         return item
     }
 }
