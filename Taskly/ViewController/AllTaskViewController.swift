@@ -9,6 +9,7 @@ import UIKit
 
 class AllTaskViewController: UIViewController {
 
+    @IBOutlet weak var navBar: NavigationBar!
     @IBOutlet weak var dateCollectionView: UICollectionView!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var taskTableView: UITableView!
@@ -17,7 +18,7 @@ class AllTaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navBar.leftImageView.image = UIImage(named: "icons8-menu-30")
         setUpView()
     }
     

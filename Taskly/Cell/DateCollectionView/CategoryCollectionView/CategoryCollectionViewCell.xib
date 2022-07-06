@@ -24,7 +24,7 @@
                                 <rect key="frame" x="10" y="10" width="171" height="42"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button">
-                                    <color key="baseBackgroundColor" red="0.23529411759999999" green="0.56862745100000001" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseBackgroundColor" red="0.23529411759999999" green="0.56862745100000001" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 </buttonConfiguration>
                             </button>
                         </subviews>
@@ -48,6 +48,9 @@
                 <constraint firstItem="dG2-RF-6yh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="udb-2Z-6Jo"/>
             </constraints>
             <size key="customSize" width="191" height="62"/>
+            <connections>
+                <outlet property="categoryButton" destination="C5S-0c-gSh" id="1o6-qa-Fx4"/>
+            </connections>
             <point key="canvasLocation" x="234.05797101449278" y="113.83928571428571"/>
         </collectionViewCell>
     </objects>
